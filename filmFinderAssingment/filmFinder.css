@@ -1,0 +1,332 @@
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+*, *:before, *:after {
+      box-sizing: inherit;
+}
+body { 
+      background-color: black;
+}
+
+header {
+      top: 0; 
+      margin: 0;
+      height: 5vh;
+      width: 100%;
+      background-color:black; 
+      text-align: center;
+      color: white;
+      padding-top: 40px;
+}
+
+nav {
+      width: 100%;
+      height: 100%;
+      height: 185px;
+      background: black;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      z-index: 99;
+}
+
+nav .navbar {
+      height: 80%;
+      max-width: 1250px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: 15%;
+}
+
+nav .navbar .links{
+      display: flex;
+}
+
+nav .navbar .links li {
+      position: relative;
+      list-style: none;
+      padding: 0 14px;
+      cursor: pointer;
+      min-width: 200px;
+      max-height: 150px;
+      margin-left: 18px;
+      border-radius: 20px;
+      color: #fff;
+      font-size: 3,5em;
+      border-radius: 10px;
+      box-shadow: 0px 2px 6px 5px rgba(255, 255, 255, 0.3);
+      height: 75px;
+}
+
+ li input {
+      display: inline-flex;
+      width: 1.25em;
+      height: 1.25em;
+      margin-left: 5px;
+      border: 2px solid #d8e4e2;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-top: 25px;
+}
+nav .navbar .links li:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 2px 6px 5px gold;
+}
+
+label {
+      font-size: 1.5em;
+}
+
+.navbar .search-box{
+      position: relative;
+      height: 25px;
+      width: 140px;
+      margin-top: 20px;
+}
+
+.navbar .search-box i{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      line-height: 40px;
+      text-align: center;
+      font-size: 22px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+}
+
+.navbar .search-box .input-box{
+      position: absolute;
+      right: calc(100% - 40px);
+      top: 80px;
+      height: 60px;
+      width: 300px;
+      background: #3E8DA8;
+      border-radius: 6px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s ease;
+}
+
+.navbar.showInput .search-box .input-box{
+      top: 65px;
+      opacity: 1;
+      pointer-events: auto;
+      background: #3E8DA8;
+}
+.search-box .input-box::before{
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      background: #3E8DA8;
+      right: 10px;
+      top: -6px;
+      transform: rotate(45deg);
+}
+.search-box .input-box input{
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      border-radius: 4px;
+      margin-top: 5px;
+      transform: translate(-50%, -50%);
+      height: 45px;
+      width: 250px;
+      outline: none;
+      padding: 0 15px;
+      font-size: 18px;
+      border: none;
+}
+
+#overzicht {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      padding: 25px;
+      margin-bottom: 20px;
+}
+
+#overzicht li {
+      display: inline;
+      justify-content: center;
+      list-style-type: none;
+      width: auto;
+      height: auto;
+      cursor: pointer;
+      margin: 10px 0px;
+      padding: 3px 6px;
+      padding-top: 4px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 6px 5px rgba(255, 255, 255, 0.3);
+}
+
+#overzicht li:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 2px 6px 5px gold;
+}
+
+img {
+      border-radius: 5px;
+      cursor: pointer;
+      height: 275px;
+      width: 100%;
+}
+    
+main {
+      position: relative;
+      background-color: black;
+      margin-top: 0;  
+}
+
+footer {
+      width: 100%;
+      height: 100px;
+      text-align: center;
+      color: white;
+      background-color: black;
+      padding-top: 20px ;
+      margin: 0;
+}
+
+/* //media Queries \\ */
+
+@media only screen and (max-width: 1350px) {
+
+h1 {
+      margin-top: 8px;
+      font-size: 1,5em;
+}
+
+nav .navbar {
+      padding: 0;
+      margin: 0 0 0 20px;
+      height: 450px;
+}
+
+nav .navbar .links {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+}
+
+nav .navbar .links li { 
+      margin-top: 10px;
+      margin-left: 0;       
+      width: 285%;
+      font-size: 1.5em;
+      height:60px;
+}
+
+main {
+      position: relative;
+      height:50%;       
+      margin-top: 300px;     
+} 
+
+.navbar .search-box .input-box{
+      position: absolute;
+      left: calc(100% - 40px);
+      top: 80px;
+      height: 60px;
+      width: 300px;
+      background: #3E8DA8;
+      border-radius: 6px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s ease;
+}
+}
+
+@media only screen and (max-width: 720px){
+nav .navbar {
+      padding: 0;
+      margin: 0 0 0 20px;   
+      height: 380px;
+}
+
+nav .navbar .nav-links {
+      left: 50px;
+}
+
+  nav .navbar .links {   
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      margin-left: 0;
+      transition: all 1.6s ease;
+}
+
+nav .navbar .links li {
+      margin-top: 5px;
+      margin-left: 0;
+      width: 240%;
+      font-size: 1.3em;
+      height:50px;
+}
+
+.navbar .search-box .input-box {
+      position: absolute;
+      left: calc(100% - 40px);
+      top: 80px;
+      height: 60px;
+      width: 300px;
+      background: #3E8DA8;
+      border-radius: 6px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s ease;
+} 
+}
+
+@media (max-width:400px){
+
+header{
+      height: 50px;
+      text-align: center;
+      font-size: 0.8em; 
+}
+
+nav .navbar {
+      padding: 0;
+      margin: 0;
+      height: 450px;
+}
+
+nav .navbar .links li {
+      margin-top: 10px;
+      margin-left: 0;
+      width: 100%;
+      font-size: 1em;
+      height:55px;
+      box-shadow: 0px 2px 6px 5px rgba(255, 255, 255, 0.3);
+}
+
+footer {
+      height: 50px;
+      font-size: 0.6em;
+}
+
+.navbar .search-box .input-box{
+      position: absolute;
+      left: calc(100% - 40px);
+      top: 80px;
+      height: 60px;
+      width: 300px;
+      background: #3E8DA8;
+      border-radius: 6px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s ease;
+}
+}
+
+
+
+
+ 

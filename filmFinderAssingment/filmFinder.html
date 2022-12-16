@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+      <meta charset="UTF-8">
+      <title>WincAcademy-filmFinder</title>
+      <link rel="stylesheet" href="filmFinder.css">   
+      <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script defer  src = "dataFilmFinder.js" ></script>
+      <script defer  src = "filmFinder.js" ></script>
+</head>
+<body>
+<header>
+      <h1><div class="titel">WincAcademy-filmFinder</div></h1>
+</header>
+  <nav>
+    <div class="navbar">        
+  
+      <div class="nav-links">
+    
+        <ul class="links">
+          <li class="navigatie"> 
+
+            <input  name="finder"  type="radio"  value="all-movies"   checked />
+            <label>All movies....</label>
+
+          </li>
+          <li  class="navigatie">
+            
+              <input  name="finder"  type="radio"  value="new-movies" />
+              <label>New-movies</label>           
+     
+          </li>
+          <li  class="navigatie">
+             
+              <input  name="finder"  type="radio"  value="avengers" />
+              <label>Avenger-movies </label>
+                 
+            </li>                                       
+          <li  class="navigatie"> 
+
+              <input  name="finder"  type="radio"  value="x-men" />
+              <label>X-Men-movies</label>
+
+          </li>
+          <li  class="navigatie">  
+
+              <input  name="finder"  type="radio"  value="princess"  />
+              <label>Princess-movies</label>
+
+          </li>
+          <li  class="navigatie">  
+            
+              <input  name="finder"  type="radio"  value="batman" />
+              <label>Batman-movies</label>
+
+          </li>
+          <li>
+              <div class="search-box">
+              <i class="bx bx-search"></i>
+                <div class="input-box">
+
+                  <form>
+                    <input id="zoek"
+                    autocomplete="off"
+                    type="search"          
+                    placeholder="Search ......!" />     
+                  </form>
+                </div>             
+            </div>
+          </li>
+        </ul>
+      </div> 
+    </div>
+  </nav>
+    
+<main>
+    <div id="container">
+      <ul id="overzicht"></ul>
+    </div>
+</main>
+
+<footer><h1>made by GdeS</h1></footer>  
+
+</body>
+</html>         
+             
+ 
+ 
